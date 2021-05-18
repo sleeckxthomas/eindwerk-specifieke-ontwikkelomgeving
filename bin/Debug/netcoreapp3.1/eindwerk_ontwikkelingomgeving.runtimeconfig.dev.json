@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sleec\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sleec\\.nuget\\packages"
+    ]
+  }
+}

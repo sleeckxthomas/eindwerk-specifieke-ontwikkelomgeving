@@ -1,0 +1,28 @@
+﻿<Window x:Class="eindwerk_ontwikkelingomgeving.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eindwerk_ontwikkelingomgeving"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="25" Margin="0,10,0,0">
+                <TextBlock Margin="75,0,0,0">timer</TextBlock>
+                <TextBlock Margin="108,0,0,0">druk op start om te beginnen</TextBlock>
+                <TextBlock Margin="50,0,0,0">geef uw naam</TextBlock>
+                <TextBlock Margin="45,0,0,0">uw score:</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Margin="5">
+                <TextBlock x:Name="tbx_timer" Width="200" FontSize="38" TextAlignment="Center"></TextBlock>
+                <Button x:Name="btn_start" Width="150" Margin="10,0,0,0" Click="btn_start_Click">start</Button>
+                <TextBox x:Name="tbx_naam" Width="150" Margin="10,0,0,0" TextAlignment="Center" VerticalAlignment="Center"></TextBox>
+                <TextBox x:Name="tbx_score" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" IsReadOnly="True"></TextBox>
+            </StackPanel>
+            <Canvas x:Name="speel_veld" Height="280" Margin="0,60,0,0" MouseDown="mouse_speel_veld" Visibility="Hidden">
+                
+            </Canvas>
+        </StackPanel>
+    </Grid>
+</Window>
