@@ -158,13 +158,9 @@ namespace eindwerk_ontwikkelingomgeving
         }
         private void reset()
         {
-            dispatcherTimer.Stop();
-            teller = 50;
-            aantal = 20;
-            tbx_timer.Text = "";
-            tbx_score.Clear();
-            tbx_naam.Clear();
-
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
         }
         private void nul_waarde()
         {
