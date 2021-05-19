@@ -104,9 +104,6 @@ namespace eindwerk_ontwikkelingomgeving
         {
             c.Children.Remove(Ellps);
         }
-
     }
-
-
 }
 

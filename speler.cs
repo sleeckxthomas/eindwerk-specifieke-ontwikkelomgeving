@@ -13,5 +13,9 @@ namespace eindwerk_ontwikkelingomgeving
         public int spelers_id { get; set; }
         public string naam { get; set; }
         public int score { get; set; }
+        public override string ToString()
+        {
+            return $"speler: {naam} - high score: {score}";
+        }
     }
 }

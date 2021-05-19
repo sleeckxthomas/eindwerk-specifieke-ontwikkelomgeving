@@ -51,9 +51,14 @@ namespace eindwerk_ontwikkelingomgeving
                 circles.Add(c1);
                 c1.AddToCanvas(speel_veld);
             }
+            using (var db = new ShopContext())
+            {
+                foreach(var s in db.spelers)
+                {
+                    lbx_highscore.Items.Add(s);
+                }
+            }
             CompositionTarget.Rendering += Loop;
-            
-
         }
         private void Loop(object sender, EventArgs e)
         {
@@ -87,7 +92,6 @@ namespace eindwerk_ontwikkelingomgeving
             }
             else if(teller >= 10 && teller < 20)
             {
-
                 score += 2;
                 tbx_score.Text = score.ToString();
             }
@@ -112,10 +116,7 @@ namespace eindwerk_ontwikkelingomgeving
                 circles.Remove(circle);
                 circle.remove(speel_veld);
             }
-
         }
-
-
         private void update_timer(object sender, EventArgs e)
         {
             teller--;
@@ -169,6 +170,18 @@ namespace eindwerk_ontwikkelingomgeving
             {
                 tbx_score.Text = g.ToString();
             }
+        }
+
+        private void btn_high_Click(object sender, RoutedEventArgs e)
+        {
+            speel_menu.Visibility = Visibility.Hidden;
+            high_score_menu.Visibility = Visibility.Visible;
+        }
+
+        private void btn_terug_Click(object sender, RoutedEventArgs e)
+        {
+            high_score_menu.Visibility = Visibility.Hidden;
+            speel_menu.Visibility = Visibility.Visible;
         }
     }
 }
