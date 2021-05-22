@@ -5,30 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:eindwerk_ontwikkelingomgeving"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MaxHeight="450" MaxWidth="800">
     <Grid>
+        <StackPanel x:Name="voetbalveld" Visibility="Visible">
+            <Image Source="images/voetbalveld.jpg" Height="521"></Image>
+        </StackPanel>
+        <StackPanel x:Name="score_veld" Visibility="Hidden">
+            <Image Source="images/high_score.jpg" ></Image>
+        </StackPanel>
         <StackPanel x:Name="speel_menu" Visibility="Visible">
             <StackPanel Orientation="Horizontal" Height="25" Margin="0,10,0,0">
-                <TextBlock Margin="75,0,0,0">timer</TextBlock>
-                <TextBlock Margin="108,0,0,0">druk op start om te beginnen</TextBlock>
-                <TextBlock Margin="50,0,0,0">geef uw naam</TextBlock>
-                <TextBlock Margin="45,0,0,0">uw score:</TextBlock>
+                <TextBlock Margin="75,0,0,0" FontFamily="century" FontSize="18">timer</TextBlock>
+                <TextBlock Margin="90,0,0,0" FontFamily="century" FontSize="12" >druk op start om te beginnen</TextBlock>
+                <TextBlock Margin="30,0,0,0" FontFamily="century" >geef uw naam</TextBlock>
+                <TextBlock Margin="60,0,0,0" FontFamily="century">uw score:</TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" Margin="5">
                 <TextBlock x:Name="tbx_timer" Width="200" FontSize="38" TextAlignment="Center"></TextBlock>
-                <Button x:Name="btn_start" Width="150" Margin="10,0,0,0" Click="btn_start_Click">start</Button>
-                <TextBox x:Name="tbx_naam" Width="150" Margin="10,0,0,0" TextAlignment="Center" VerticalAlignment="Center"></TextBox>
-                <TextBox x:Name="tbx_score" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" IsReadOnly="True"></TextBox>
-                <Button x:Name="btn_high" Width="100" Margin="25,0,0,0" FontSize="20" Click="btn_high_Click">high score</Button>
+                <Button x:Name="btn_start" Width="150" Margin="10,0,0,0" BorderBrush="Transparent" Click="btn_start_Click" FontFamily="century" FontSize="35" Background="LightGreen">start</Button>
+                <TextBox x:Name="tbx_naam" Width="150" Margin="10,0,0,0" TextAlignment="Center" VerticalAlignment="Center" Background="Transparent"></TextBox>
+                <TextBlock  x:Name="tbx_score" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="10,0,0,0"></TextBlock>
+                <Button x:Name="btn_high" Width="100" Margin="25,0,0,0" FontSize="20" Click="btn_high_Click" FontFamily="century" BorderBrush="Transparent" Background="Orange">high score</Button>
             </StackPanel>
-            <StackPanel Height="340">
+            <StackPanel Height="338">
                 <Canvas x:Name="speel_veld" Height="280" Margin="0,60,0,0" MouseDown="mouse_speel_veld" Visibility="Hidden"></Canvas>
             </StackPanel>
         </StackPanel>
-        <StackPanel x:Name="high_score_menu" Visibility="Hidden">
-            <TextBlock x:Name="tbx_high_score" Height="50" Width="150" HorizontalAlignment="Left" TextAlignment="Center" FontSize="30" Margin="5,10,0,0" Visibility="Visible">high score</TextBlock>
-            <ListBox x:Name="lbx_highscore" Height="250" Width="250" HorizontalAlignment="Left" Visibility="Visible" Margin="5,5,0,0"></ListBox>
-            <Button x:Name="btn_terug" HorizontalAlignment="Left" Height="75" Width="150" Margin="5" Click="btn_terug_Click">terug</Button>
+        <StackPanel x:Name="high_score_menu" Visibility="Hidden" RenderTransformOrigin="0.534,0.476">
+            <ListBox x:Name="lbx_highscore" Height="250" Width="300" HorizontalAlignment="Left" Margin="5,50,0,0" Background="Transparent" Foreground="White" FontSize="15" BorderBrush="Transparent" ></ListBox>
+            <Button x:Name="btn_terug" HorizontalAlignment="Left" Height="75" Width="150" Margin="5" FontSize="50" Click="btn_terug_Click" Background="Red" VerticalAlignment="Stretch" FontFamily="Century" FontWeight="Bold">terug</Button>
         </StackPanel>
     </Grid>
 </Window>

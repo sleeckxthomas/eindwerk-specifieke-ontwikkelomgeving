@@ -107,7 +107,7 @@ namespace eindwerk_ontwikkelingomgeving
                 mplayer.Play();
                 speel_veld.Visibility = Visibility.Hidden;
                 reset();
-                MessageBox.Show("ge zet eraan!!");
+                MessageBox.Show("game over!");
             }
             else if(circle.Ellps.Tag.ToString() == "")
             {
@@ -176,12 +176,16 @@ namespace eindwerk_ontwikkelingomgeving
         {
             speel_menu.Visibility = Visibility.Hidden;
             high_score_menu.Visibility = Visibility.Visible;
+            voetbalveld.Visibility = Visibility.Hidden;
+            score_veld.Visibility = Visibility.Visible;
         }
 
         private void btn_terug_Click(object sender, RoutedEventArgs e)
         {
             high_score_menu.Visibility = Visibility.Hidden;
             speel_menu.Visibility = Visibility.Visible;
+            voetbalveld.Visibility = Visibility.Visible;
+            score_veld.Visibility = Visibility.Hidden;
         }
     }
 }

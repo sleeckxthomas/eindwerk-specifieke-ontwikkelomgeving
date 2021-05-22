@@ -13,6 +13,9 @@
     <None Remove="images\balcb2.jpg" />
     <None Remove="images\balrood.jpg" />
     <None Remove="images\balrood2.jpg" />
+    <None Remove="images\high_score.jpg" />
+    <None Remove="images\nr1.jpg" />
+    <None Remove="images\voetbalveld.jpg" />
     <None Remove="sound\incorrect sound effect.mp3" />
     <None Remove="sound\Mission Failed.mp3" />
   </ItemGroup>
@@ -34,6 +37,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="images\balrood2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\high_score.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nr1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\voetbalveld.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\incorrect sound effect.mp3">
