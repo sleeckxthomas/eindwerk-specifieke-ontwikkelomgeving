@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:eindwerk_ontwikkelingomgeving"
         mc:Ignorable="d"
-        Title="MainWindow" MaxHeight="450" MaxWidth="800">
+        Title="MainWindow" MaxHeight="550" MaxWidth="800">
     <Grid>
         <StackPanel x:Name="voetbalveld" Visibility="Visible">
             <Image Source="images/voetbalveld.jpg" Height="521"></Image>
         </StackPanel>
         <StackPanel x:Name="score_veld" Visibility="Hidden">
-            <Image Source="images/high_score.jpg" ></Image>
+            <Image Source="images/high_score.jpg"></Image>
         </StackPanel>
         <StackPanel x:Name="speel_menu" Visibility="Visible">
             <StackPanel Orientation="Horizontal" Height="25" Margin="0,10,0,0">
@@ -27,13 +27,14 @@
                 <TextBlock  x:Name="tbx_score" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="10,0,0,0"></TextBlock>
                 <Button x:Name="btn_high" Width="100" Margin="25,0,0,0" FontSize="20" Click="btn_high_Click" FontFamily="century" BorderBrush="Transparent" Background="Orange">high score</Button>
             </StackPanel>
-            <StackPanel Height="338">
-                <Canvas x:Name="speel_veld" Height="280" Margin="0,60,0,0" MouseDown="mouse_speel_veld" Visibility="Hidden"></Canvas>
+            <StackPanel Height="425">
+                <Canvas x:Name="speel_veld" Height="365" Margin="0,60,0,0" MouseDown="mouse_speel_veld" Visibility="Hidden"></Canvas>
             </StackPanel>
         </StackPanel>
-        <StackPanel x:Name="high_score_menu" Visibility="Hidden" RenderTransformOrigin="0.534,0.476">
+        <StackPanel  x:Name="high_score_menu" Visibility="Hidden" RenderTransformOrigin="0.534,0.476">
             <ListBox x:Name="lbx_highscore" Height="250" Width="300" HorizontalAlignment="Left" Margin="5,50,0,0" Background="Transparent" Foreground="White" FontSize="15" BorderBrush="Transparent" ></ListBox>
-            <Button x:Name="btn_terug" HorizontalAlignment="Left" Height="75" Width="150" Margin="5" FontSize="50" Click="btn_terug_Click" Background="Red" VerticalAlignment="Stretch" FontFamily="Century" FontWeight="Bold">terug</Button>
+            <Button x:Name="btn_terug" HorizontalAlignment="Left" Height="75" Width="150" Margin="5" FontSize="50" Click="btn_terug_Click" Background="Red" BorderBrush="Transparent" VerticalAlignment="Stretch" FontFamily="Century" FontWeight="Bold">terug</Button>
+            <TextBlock Margin="0,55,0,0" Height="72" Background="Black"></TextBlock>
         </StackPanel>
     </Grid>
 </Window>

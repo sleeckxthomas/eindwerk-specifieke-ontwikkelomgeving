@@ -47,13 +47,13 @@ namespace eindwerk_ontwikkelingomgeving
             }
             set
             {
-                if (value > 280)
+                if (value > 365)
                 {
                     _y = -50;
                 }
                 else if (value < -50)
                 {
-                    _y = 280;
+                    _y = 365;
                 }
                 else
                 {
@@ -74,7 +74,7 @@ namespace eindwerk_ontwikkelingomgeving
             Ellps.Height = 50;
             Random rand = new Random();
             X = rand.Next(0, 750);
-            Y = rand.Next(0, 250);
+            Y = rand.Next(0, 335);
 
             _speedX = rand.Next(-4, 4);
             _speedY = rand.Next(-4, 4);
