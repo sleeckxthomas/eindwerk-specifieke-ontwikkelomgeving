@@ -1,0 +1,28 @@
+﻿<Window x:Class="project.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project"
+        mc:Ignorable="d"
+    Title="login" Height="600" Width="500">
+    <Grid>
+        <ScrollViewer x:Name="begin_login" Visibility="Hidden">
+            <StackPanel Width="500" Background="LightGray">
+                <TextBlock Height="120" Width="500" TextAlignment="Center" VerticalAlignment="Center" FontSize="70" Background="DimGray" FontWeight="Bold" Padding="5">login</TextBlock>
+                <Button x:Name="inlog_button" Height="120" Width="150" Margin="0,75,0,0" FontSize="35" Click="inlog_button_Click" Background="Green">inloggen</Button>
+                <Button x:Name="afsluit_button" Height="120" Width="150" Margin="0,75,0,0" FontSize="35" Click="afsluit_button_Click" Background="Red">afsluiten</Button>
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer x:Name="login_menu" Visibility="Visible">
+            <StackPanel Width="500" Background="LightGray">
+                <TextBlock Height="120" Width="500" TextAlignment="Center" VerticalAlignment="Center" FontSize="70" Background="DimGray" FontWeight="Bold" Padding="5">login</TextBlock>
+                <TextBlock Height="30" Width="250" FontSize="20" TextAlignment="Center" Margin="0,100,0,0" >gebruikersnaam</TextBlock>
+                <TextBox x:Name="tbx_gebruiker" Height="30" Width="250" TextAlignment="Center" FontSize="20" Margin="0,10,0,0" Background="White"></TextBox>
+                <TextBlock Height="30" Width="250" FontSize="20" TextAlignment="Center" Margin="0,50,0,0">wachtwoord</TextBlock>
+                <PasswordBox x:Name="pwb_wachtwoord" Height="30" Width="250" FontSize="15" Margin="0,10,0,0" HorizontalContentAlignment="Center"></PasswordBox>
+                <Button x:Name="login_button" Height="40" Width="250" Margin="0,5,0,0" Background="Green" FontSize="20" Padding="5" Click="login_button_Click">login</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
